@@ -1,6 +1,6 @@
 # Master-Thesis-Hybrid-Power-Plants
 
-Important first step before operating the model 
+Important first step before operating the model is to download the sandia toolbox which can be downloaded using this link: https://pvpmc.sandia.gov/PVLIB_Matlab_Help/
 
 
 # To use the model of the hybrid power plant (HPP)
