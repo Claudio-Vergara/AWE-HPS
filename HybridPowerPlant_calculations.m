@@ -35,12 +35,12 @@ Wind.v              = ncread('Iraq.nc','v');                         % Wind data
 
 
 %%% Load %%%
-% Load.Total  = 4760000;  % [Wh] Total Energy Load, equal to the energy yield of ten kites, or an military camp of 1300 personnel
+% Load.Total  = 4760000;  % [Wh] Total Energy Load, equal to the energy yield of ten kites, or a military camp of 1300 personnel
 
 
 %%% Location dependent variables %%%
 Location.latitude   = 30.56;    % Latitude of the location positive is north
-Location.longitude  = 47.25;   % Longitude of the location positive is east
+Location.longitude  = 47.25;    % Longitude of the location positive is east
 Location.altitude   = 18;       % Height of the location [m]
 Location.albedo     = 0.19;     % Albedo of an open field of grass is equal to 0.19
 
@@ -84,7 +84,7 @@ Cost.Additional     = 24100;    % Additional cost related to cabling, grid conne
 
 
 %%% Storage %%%
-Cost.BatteryPrice   = 0.182;    % [EUR/Wh] source: https://www.nrel.gov/docs/fy21osti/79236.pdf, zie ook paper mihir mehta
+Cost.BatteryPrice   = 0.182;    % [EUR/Wh] source: https://www.nrel.gov/docs/fy21osti/79236.pdf
 
 
 %%% Diesel %%%
@@ -132,7 +132,7 @@ Diesel.CAPEX        = 0.600;    % [EUR/W] CAPEX cost of diesel source: https://w
 
 
 % Load Data Military Camp
-Load.MilitaryCamp = 1000000*ones(8760,1);
+Load.MilitaryCamp = 1000000*ones(8760,1); % Load in this case is equal to 1 MWh/h
 
 
 % Daily energy demand
@@ -648,7 +648,7 @@ Cost.HPPYearly  = (Cost.SolarYearly + Cost.WindYearly + Cost.Battery + System.Lo
 LCoE = sum(Cost.HPPYearly) / sum(Energy.HPPLCoE) * 1000;    % [EUR/MWh]
 
 
-Diesel.Percentage = sum(Diesel.Necessary)/(3*8760*1000000);
+Diesel.Percentage = sum(Diesel.Necessary)/(3*8760*1000000); % Percentage of diesel generation
 
 
 %%%%%%
